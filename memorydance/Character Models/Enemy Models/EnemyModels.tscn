@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://drow2glx4rqn7"]
+
+[node name="EnemyModels" type="Node2D"]

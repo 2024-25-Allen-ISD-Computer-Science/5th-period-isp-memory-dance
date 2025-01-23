@@ -17,21 +17,32 @@ func end_player_turn():
 	# cleared and a new enemy pattern is generated
 	if Global.player_moves == Global.enemy_moves:
 		print("correct")
+		Global.current_move = 0
+		Global.player_position = 0
 		Global.player_moves.clear()
 		Global.enemy_moves.clear()
+		$MoveTimer.start()
+		await $MoveTimer.timeout
 		generate_enemy_pattern(move_limit)
 	
 	# If the player does not match the enemy pattern correctly, player array
 	# is cleared while the enemy repeats the same pattern
 	else:
 		print("incorrect")
+		Global.current_move = 0
+		Global.player_position = 0
 		Global.player_moves.clear()
+		$MoveTimer.start()
+		await $MoveTimer.timeout
 		for i in Global.enemy_moves.size():
 			Global.enemy_position = Global.enemy_moves[i]
 			print(Global.enemy_moves)
+			Global.current_move += 1
 			$MoveTimer.start()
 			await $MoveTimer.timeout
 		
+		Global.current_move = 0
+		Global.enemy_position = 0
 		# Player turn begins
 		Global.player_turn = true
 
@@ -41,9 +52,12 @@ func generate_enemy_pattern(moves: int):
 		Global.enemy_position = randi_range(1,4)
 		Global.enemy_moves.append(Global.enemy_position)
 		print(Global.enemy_moves)
+		Global.current_move += 1
 		$MoveTimer.start()
 		await $MoveTimer.timeout
 	
+	Global.current_move = 0
+	Global.enemy_position = 0
 	# Player turn begins
 	Global.player_turn = true
 

@@ -10,14 +10,19 @@ func _ready() -> void:
 func _process(_delta: float):
 	# Calls corresponding player movement function when pressing arrows or WASD 
 	# keys
-	if Input.is_action_just_pressed("PlayerUp"):
-		Global.player_movement_up()
-	
-	if Input.is_action_just_pressed("PlayerDown"):
-		Global.player_movement_down()
-	
-	if Input.is_action_just_pressed("PlayerRight"):
-		Global.player_movement_right()
-	
-	if Input.is_action_just_pressed("PlayerLeft"):
-		Global.player_movement_left()
+	if Global.player_turn == true:
+		if Input.is_action_just_pressed("PlayerUp"):
+			Global.player_movement_up()
+			Global.current_move += 1
+		
+		if Input.is_action_just_pressed("PlayerDown"):
+			Global.player_movement_down()
+			Global.current_move += 1
+		
+		if Input.is_action_just_pressed("PlayerRight"):
+			Global.player_movement_right()
+			Global.current_move += 1
+		
+		if Input.is_action_just_pressed("PlayerLeft"):
+			Global.player_movement_left()
+			Global.current_move += 1

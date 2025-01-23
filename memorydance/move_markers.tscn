@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://matarjgif5s2"]
+
+[ext_resource type="Script" path="res://move_markers.gd" id="1_eted1"]
+[ext_resource type="Texture2D" uid="uid://bv06mhpwphd26" path="res://Assets/MoveMarker.png" id="2_fbg5h"]
+
+[node name="MoveMarkers" type="Node2D"]
+script = ExtResource("1_eted1")
+
+[node name="MoveMarker" type="Sprite2D" parent="."]
+position = Vector2(308, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_fbg5h")
+
+[node name="MoveMarker2" type="Sprite2D" parent="."]
+position = Vector2(358, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_fbg5h")
+
+[node name="MoveMarker3" type="Sprite2D" parent="."]
+position = Vector2(408, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_fbg5h")
+
+[node name="MoveMarker4" type="Sprite2D" parent="."]
+position = Vector2(458, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_fbg5h")

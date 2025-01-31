@@ -4,8 +4,8 @@ extends Node
 onready var music_player = $BackgroundMusic
 
 func _ready():
-    # Play the background music on loop
-    music_player.stream = preload("res://choose_a_music_file.ogg") 
-    music_player.loop = true
-    music_player.play()
-music_player.volume_db = -10  # Set volume to -10 dB (lowering the volume)
+	# Play the background music on loop
+	music_player.stream = preload("res://we_need_to_choose_music.ogg")  
+	music_player.loop = true
+	music_player.play()
+	music_player.volume_db = -10  # Set volume to -10 dB (lowering the volume)

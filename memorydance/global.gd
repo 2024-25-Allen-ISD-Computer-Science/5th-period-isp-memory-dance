@@ -1,6 +1,7 @@
 extends Node
 
 var current_move = 0
+var text = 0
 
 # Player Variables:
 var player_turn = false

@@ -16,7 +16,7 @@ func end_player_turn():
 	# If the player matches the enemy pattern correctly, both arrays are
 	# cleared and a new enemy pattern is generated
 	if Global.player_moves == Global.enemy_moves:
-		print("correct")
+		Global.text = 3
 		Global.current_move = 0
 		Global.player_position = 0
 		Global.player_moves.clear()
@@ -28,7 +28,7 @@ func end_player_turn():
 	# If the player does not match the enemy pattern correctly, player array
 	# is cleared while the enemy repeats the same pattern
 	else:
-		print("incorrect")
+		Global.text = 4
 		Global.current_move = 0
 		Global.player_position = 0
 		Global.player_moves.clear()
@@ -44,6 +44,7 @@ func end_player_turn():
 		Global.current_move = 0
 		Global.enemy_position = 0
 		# Player turn begins
+		Global.text = 5
 		Global.player_turn = true
 
 # Generates enemy pattern in an array while enemy performs
@@ -59,6 +60,7 @@ func generate_enemy_pattern(moves: int):
 	Global.current_move = 0
 	Global.enemy_position = 0
 	# Player turn begins
+	Global.text = 5
 	Global.player_turn = true
 
 func _on_timer_timeout():

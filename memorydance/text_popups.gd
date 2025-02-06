@@ -6,6 +6,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Global.starting == true:
+		Global.starting = false
+		display($"3")
+		await $Countdown.timeout
+		display($"2")
+		await $Countdown.timeout
+		display($"1")
+		await $Countdown.timeout
+		display($Dance)
+		await $Countdown.timeout
+	
 	match Global.text:
 		1: #Still needs to be implemented
 			display($EnemyWin)
@@ -28,10 +39,3 @@ func display(text: Sprite2D):
 	$Countdown.start()
 	await $Countdown.timeout
 	text.visible = false
-
-func reset():
-	$EnemyWin.visible = false
-	$PlayerWin.visible = false
-	$Perfect.visible = false
-	$TryAgain.visible = false
-	$YourTurn.visible = false

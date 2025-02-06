@@ -3,6 +3,9 @@ extends Node2D
 # Set the limit for enemy moves in pattern generation
 var move_limit = 4
 
+func _ready():
+	Global.starting = true
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float):
 	# If the player has performed the same amount of moves as the enemy,
@@ -63,5 +66,5 @@ func generate_enemy_pattern(moves: int):
 	Global.text = 5
 	Global.player_turn = true
 
-func _on_timer_timeout():
+func _on_starting_timer_timeout():
 	generate_enemy_pattern(move_limit)

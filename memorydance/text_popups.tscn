@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://8a2p58igvts5"]
+
+[ext_resource type="Script" path="res://text_popups.gd" id="1_e1p8w"]
+[ext_resource type="Texture2D" uid="uid://bptvkw405321" path="res://Assets/1.png" id="2_emyi6"]
+[ext_resource type="Texture2D" uid="uid://dauxh0eqxifwj" path="res://Assets/2.png" id="3_cpg6v"]
+[ext_resource type="Texture2D" uid="uid://bfmaf4eg31r7k" path="res://Assets/3.png" id="4_au1kv"]
+[ext_resource type="Texture2D" uid="uid://wspftrh43bmn" path="res://Assets/Dance.png" id="5_vnfcs"]
+[ext_resource type="Texture2D" uid="uid://dvb3eqbg1bpwa" path="res://Assets/EnemyWin.png" id="6_o4t6j"]
+[ext_resource type="Texture2D" uid="uid://bljf7bpgwjy0a" path="res://Assets/Perfect.png" id="7_3s6f3"]
+[ext_resource type="Texture2D" uid="uid://dawo2xa7vkiye" path="res://Assets/PlayerWin.png" id="8_td4uo"]
+[ext_resource type="Texture2D" uid="uid://bltpbi1y7ggpd" path="res://Assets/TryAgain.png" id="9_8q8ei"]
+[ext_resource type="Texture2D" uid="uid://3a8ycmrtgi21" path="res://Assets/YourTurn.png" id="10_vbv45"]
+
+[node name="TextPopups" type="Node2D"]
+script = ExtResource("1_e1p8w")
+
+[node name="1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_emyi6")
+
+[node name="2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_cpg6v")
+
+[node name="3" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_au1kv")
+
+[node name="Dance" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_vnfcs")
+
+[node name="EnemyWin" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_o4t6j")
+
+[node name="Perfect" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("7_3s6f3")
+
+[node name="PlayerWin" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("8_td4uo")
+
+[node name="TryAgain" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("9_8q8ei")
+
+[node name="YourTurn" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("10_vbv45")
+
+[node name="Countdown" type="Timer" parent="."]
+one_shot = true
+
+[node name="TimerDisplay" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

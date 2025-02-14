@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cly51rnm4pvsn" path="res://Assets/Restart.png" id="3_3br0w"]
 
 [node name="GameOver" type="Node2D"]
+z_index = 5
 script = ExtResource("1_bo4ch")
 
 [node name="MainMenu" type="TextureButton" parent="."]

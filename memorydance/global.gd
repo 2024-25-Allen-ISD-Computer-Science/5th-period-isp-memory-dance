@@ -8,6 +8,7 @@ var restarting = false
 # Player Variables:
 var player_turn = false
 var player_moves = []
+var player_health = 100
 
 # idle = 0, up = 1, down = 2, right = 3, left = 4
 var player_position = 0
@@ -15,10 +16,14 @@ var player_position = 0
 
 # Enemy Variables:
 var enemy_moves = []
+var enemy_health = 100
 
 # idle = 0, up = 1, down = 2, right = 3, left = 4
 var enemy_position = 0
 
+var game_over = preload("res://game_over.tscn")
+
+# Resets all relevant variables to restart the game
 func restart():
 	restarting = false
 	current_move = 0
@@ -28,6 +33,8 @@ func restart():
 	enemy_moves.clear()
 	player_position = 0
 	enemy_position = 0
+	player_health = 100
+	enemy_health = 100
 
 # Player Movements:
 

@@ -10,7 +10,7 @@
 script = ExtResource("1_xw185")
 
 [node name="PlayerModels" parent="." instance=ExtResource("2_gqcki")]
-position = Vector2(704, 299)
+position = Vector2(761, 299)
 
 [node name="EnemyModels" parent="." instance=ExtResource("3_8oeif")]
 position = Vector2(383, 339)
@@ -24,10 +24,10 @@ autostart = true
 wait_time = 2.0
 
 [node name="MoveMarkers" parent="." instance=ExtResource("4_erass")]
-position = Vector2(153, 90)
+position = Vector2(191, 87)
 
 [node name="TextPopups" parent="." instance=ExtResource("5_cftk1")]
-position = Vector2(552, 303)
+position = Vector2(573, 332)
 
 [connection signal="timeout" from="StartingTimer" to="." method="_on_starting_timer_timeout"]
 [connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]

@@ -6,6 +6,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	# If the game is starting, display the countdown
 	if Global.starting == true:
 		Global.starting = false
 		display($"3")
@@ -17,11 +18,13 @@ func _process(delta: float) -> void:
 		display($Dance)
 		await $Countdown.timeout
 	
+	# Displays text according to what the variable text is set to,
+	# which changes in the game scene
 	match Global.text:
-		1: #Still needs to be implemented
+		1:
 			display($EnemyWin)
 			Global.text = 0
-		2: #Still needs to be implemented
+		2: 
 			display($PlayerWin)
 			Global.text = 0
 		3:
@@ -34,6 +37,7 @@ func _process(delta: float) -> void:
 			display($YourTurn)
 			Global.text = 0
 
+# Display select text for 1 second
 func display(text: Sprite2D):
 	text.visible = true
 	$Countdown.start()

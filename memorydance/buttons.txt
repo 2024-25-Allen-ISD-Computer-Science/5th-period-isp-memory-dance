@@ -1,0 +1,21 @@
+extends Control  # Or Panel depending on your root node type
+
+# Declare buttons as variables
+var start_button : Button
+var end_button : Button
+
+# Declare variables to control game state
+var game_started = false
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	# Reference the buttons by their names (ensure names match in the scene)
+	start_button = $StartButton
+	end_button = $EndButton
+	
+	# Connect signals to handle button presses
+	start_button.connect("pressed", self, "_on_start_button_pressed")
+	end_button.connect("pressed", self, "_on_end_button_pressed")
+
+	# Initially disable the End button, we only want it active after the game starts
+	end_button.disabled = true

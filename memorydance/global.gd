@@ -21,7 +21,7 @@ var enemy_health = 100
 # idle = 0, up = 1, down = 2, right = 3, left = 4
 var enemy_position = 0
 
-var game_over = preload("res://game_over.tscn")
+var game_over = preload("res://Scene Setup/game_over.tscn")
 
 # Resets all relevant variables to restart the game
 func restart():

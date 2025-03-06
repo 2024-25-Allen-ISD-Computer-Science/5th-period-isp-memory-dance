@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://desik7syjbhuv"]
+[gd_scene load_steps=16 format=3 uid="uid://desik7syjbhuv"]
 
 [ext_resource type="Script" path="res://Character Models/Player Models/player_models.gd" id="1_6nga4"]
 [ext_resource type="Texture2D" uid="uid://b4srfsj1l2r2d" path="res://Assets/PlayerIdle.png" id="1_ykp7t"]
@@ -11,6 +11,10 @@
 [ext_resource type="Script" path="res://Character Models/Player Models/player_down.gd" id="7_qgydq"]
 [ext_resource type="Script" path="res://Character Models/Player Models/player_right.gd" id="9_uhw38"]
 [ext_resource type="Script" path="res://Character Models/Player Models/player_left.gd" id="11_c7y30"]
+[ext_resource type="AudioStream" uid="uid://dyi71b2iqituc" path="res://Assets/Sound Guides/PlayerUp.wav" id="12_hfah5"]
+[ext_resource type="AudioStream" uid="uid://cdy0vigi57wj6" path="res://Assets/Sound Guides/PlayerDown.wav" id="13_6intn"]
+[ext_resource type="AudioStream" uid="uid://hiv6euhhoig0" path="res://Assets/Sound Guides/PlayerRight.wav" id="14_e587j"]
+[ext_resource type="AudioStream" uid="uid://b1jwrqfs187ek" path="res://Assets/Sound Guides/PlayerLeft.wav" id="15_afrkf"]
 
 [node name="PlayerModels" type="Node2D"]
 script = ExtResource("1_6nga4")
@@ -43,3 +47,15 @@ visible = false
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_nm27y")
 script = ExtResource("11_c7y30")
+
+[node name="UpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_hfah5")
+
+[node name="DownSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_6intn")
+
+[node name="RightSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_e587j")
+
+[node name="LeftSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_afrkf")

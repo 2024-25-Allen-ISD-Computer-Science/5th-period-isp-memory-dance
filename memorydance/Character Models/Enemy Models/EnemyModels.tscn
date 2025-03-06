@@ -1,17 +1,23 @@
-[gd_scene load_steps=11 format=3 uid="uid://drow2glx4rqn7"]
+[gd_scene load_steps=16 format=3 uid="uid://drow2glx4rqn7"]
 
-[ext_resource type="Texture2D" uid="uid://difusn523ygib" path="res://Assets/EnemyIdle.png" id="1_vm181"]
+[ext_resource type="Script" path="res://Character Models/Enemy Models/enemy_models.gd" id="1_6ssva"]
+[ext_resource type="Texture2D" uid="uid://be3qwkcbna4j5" path="res://Assets/EnemyIdle.png" id="1_vm181"]
 [ext_resource type="Script" path="res://Character Models/Enemy Models/enemy_idle.gd" id="2_ireno"]
-[ext_resource type="Texture2D" uid="uid://bytcjo5gx11y6" path="res://Assets/EnemyUp.png" id="2_lc1tu"]
+[ext_resource type="Texture2D" uid="uid://o2v5ovr5xujm" path="res://Assets/EnemyUp.png" id="2_lc1tu"]
 [ext_resource type="Texture2D" uid="uid://dv1uks7orwujb" path="res://Assets/EnemyDown.png" id="3_n2aqp"]
 [ext_resource type="Script" path="res://Character Models/Enemy Models/enemy_up.gd" id="4_g6d0q"]
-[ext_resource type="Texture2D" uid="uid://bcri3h2ikvw6d" path="res://Assets/EnemyRight.png" id="4_y2xrh"]
-[ext_resource type="Texture2D" uid="uid://f8ikyqifmcrt" path="res://Assets/EnemyLeft.png" id="5_riyrg"]
+[ext_resource type="Texture2D" uid="uid://8ioqta0hug3n" path="res://Assets/EnemyRight.png" id="4_y2xrh"]
+[ext_resource type="Texture2D" uid="uid://cs8721r72q37l" path="res://Assets/EnemyLeft.png" id="5_riyrg"]
 [ext_resource type="Script" path="res://Character Models/Enemy Models/enemy_down.gd" id="6_nvoqu"]
 [ext_resource type="Script" path="res://Character Models/Enemy Models/enemy_right.gd" id="8_l5ijq"]
 [ext_resource type="Script" path="res://Character Models/Enemy Models/enemy_left.gd" id="10_cffpw"]
+[ext_resource type="AudioStream" uid="uid://gvldbn6npbi5" path="res://Assets/Sound Guides/EnemyUp.wav" id="12_tdn1i"]
+[ext_resource type="AudioStream" uid="uid://c5v8xpjrjdn8k" path="res://Assets/Sound Guides/EnemyDown.wav" id="13_it3vh"]
+[ext_resource type="AudioStream" uid="uid://c0o5l3fy16r8l" path="res://Assets/Sound Guides/EnemyLeft.wav" id="14_8iknw"]
+[ext_resource type="AudioStream" uid="uid://csyhhe3cf0x8" path="res://Assets/Sound Guides/EnemyRight.wav" id="15_6mmgp"]
 
 [node name="EnemyModels" type="Node2D"]
+script = ExtResource("1_6ssva")
 
 [node name="EnemyIdle" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
@@ -41,3 +47,19 @@ visible = false
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_riyrg")
 script = ExtResource("10_cffpw")
+
+[node name="UpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_tdn1i")
+
+[node name="DownSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_it3vh")
+
+[node name="LeftSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_8iknw")
+
+[node name="RightSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_6mmgp")
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true

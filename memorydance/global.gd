@@ -1,9 +1,12 @@
 extends Node
 
+# General variables
 var current_move = 0
 var text = 0
 var starting = false
 var restarting = false
+var sound_guides = true
+var sound_playing = false
 
 # Player Variables:
 var player_turn = false

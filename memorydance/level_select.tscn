@@ -68,6 +68,12 @@ offset_bottom = 619.0
 flat = true
 metadata/_edit_lock_ = true
 
+[node name="Sound Guides" type="CheckButton" parent="."]
+offset_left = 906.0
+offset_top = 83.0
+offset_right = 950.0
+offset_bottom = 107.0
+
 [connection signal="button_up" from="MainMenu" to="." method="_on_main_menu_button_up"]
 [connection signal="button_up" from="Easy" to="." method="_on_easy_button_up"]
 [connection signal="button_up" from="Normal" to="." method="_on_normal_button_up"]
@@ -75,3 +81,4 @@ metadata/_edit_lock_ = true
 [connection signal="button_up" from="InfinityMode" to="." method="_on_infinity_mode_button_up"]
 [connection signal="button_up" from="OneAndDone" to="." method="_on_one_and_done_button_up"]
 [connection signal="button_up" from="AddOne" to="." method="_on_add_one_button_up"]
+[connection signal="toggled" from="Sound Guides" to="." method="_on_sound_guides_toggled"]

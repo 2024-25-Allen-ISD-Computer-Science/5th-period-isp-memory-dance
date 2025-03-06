@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8ioqta0hug3n"
-path="res://.godot/imported/EnemyRight.png-425ff03bfd7e663ae7b4fe535d9dd51e.ctex"
+uid="uid://lguqmkj4ap6h"
+path="res://.godot/imported/Memory Dance Game.png-a37512c72a6e6a26fac1843b82e92004.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/EnemyRight.png"
-dest_files=["res://.godot/imported/EnemyRight.png-425ff03bfd7e663ae7b4fe535d9dd51e.ctex"]
+source_file="res://Assets/Start Screen/Memory Dance Game.png"
+dest_files=["res://.godot/imported/Memory Dance Game.png-a37512c72a6e6a26fac1843b82e92004.ctex"]
 
 [params]
 

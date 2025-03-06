@@ -22,6 +22,7 @@ autostart = true
 
 [node name="MoveTimer" type="Timer" parent="."]
 wait_time = 2.0
+one_shot = true
 
 [node name="MoveMarkers" parent="." instance=ExtResource("4_erass")]
 position = Vector2(191, 87)
@@ -30,4 +31,3 @@ position = Vector2(191, 87)
 position = Vector2(573, 332)
 
 [connection signal="timeout" from="StartingTimer" to="." method="_on_starting_timer_timeout"]
-[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]

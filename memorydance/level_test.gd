@@ -43,6 +43,7 @@ func end_player_turn():
 			$MoveTimer.start()
 			await $MoveTimer.timeout
 			for i in Global.enemy_moves.size():
+				Global.sound_playing = false
 				Global.enemy_position = Global.enemy_moves[i]
 				print(Global.enemy_moves)
 				Global.current_move += 1
@@ -58,6 +59,7 @@ func end_player_turn():
 # Generates enemy pattern in an array while enemy performs
 func generate_enemy_pattern(moves: int):
 	for i in moves:
+		Global.sound_playing = false
 		Global.enemy_position = randi_range(1,4)
 		Global.enemy_moves.append(Global.enemy_position)
 		print(Global.enemy_moves)

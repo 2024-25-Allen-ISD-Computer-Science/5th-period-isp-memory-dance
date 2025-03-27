@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://djsagr4ldfyfu"]
+[gd_scene load_steps=7 format=3 uid="uid://djsagr4ldfyfu"]
 
 [ext_resource type="Script" path="res://level_test.gd" id="1_xw185"]
 [ext_resource type="PackedScene" uid="uid://desik7syjbhuv" path="res://Character Models/Player Models/PlayerModels.tscn" id="2_gqcki"]
 [ext_resource type="PackedScene" uid="uid://drow2glx4rqn7" path="res://Character Models/Enemy Models/EnemyModels.tscn" id="3_8oeif"]
 [ext_resource type="PackedScene" uid="uid://matarjgif5s2" path="res://Scene Setup/move_markers.tscn" id="4_erass"]
 [ext_resource type="PackedScene" uid="uid://8a2p58igvts5" path="res://Scene Setup/text_popups.tscn" id="5_cftk1"]
+[ext_resource type="PackedScene" uid="uid://cog8flxuduvjl" path="res://Scene Setup/Health System/health_bars.tscn" id="6_qe601"]
 
 [node name="Test" type="Node2D"]
 script = ExtResource("1_xw185")
@@ -29,5 +30,7 @@ position = Vector2(191, 87)
 
 [node name="TextPopups" parent="." instance=ExtResource("5_cftk1")]
 position = Vector2(573, 332)
+
+[node name="PlayerHealth" parent="." instance=ExtResource("6_qe601")]
 
 [connection signal="timeout" from="StartingTimer" to="." method="_on_starting_timer_timeout"]

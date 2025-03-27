@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=3 uid="uid://cog8flxuduvjl"]
+
+[ext_resource type="Script" path="res://Scene Setup/Health System/player_health.gd" id="1_k4dk8"]
+[ext_resource type="Script" path="res://Scene Setup/Health System/enemy_health.gd" id="2_2h0kf"]
+
+[sub_resource type="Gradient" id="Gradient_ckhod"]
+offsets = PackedFloat32Array(0, 0.961268)
+colors = PackedColorArray(0.968627, 0.6, 0.431373, 1, 0.968627, 0.6, 0.431373, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_35yk0"]
+gradient = SubResource("Gradient_ckhod")
+width = 300
+height = 50
+
+[sub_resource type="Gradient" id="Gradient_71pn5"]
+offsets = PackedFloat32Array(0, 0.96831)
+colors = PackedColorArray(0.886275, 0.435294, 0.211765, 1, 0.886275, 0.435294, 0.211765, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rj34r"]
+gradient = SubResource("Gradient_71pn5")
+width = 300
+height = 50
+
+[sub_resource type="Gradient" id="Gradient_dqecl"]
+colors = PackedColorArray(0.25098, 0.588235, 0.956863, 1, 0.25098, 0.588235, 0.956863, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xvqi3"]
+gradient = SubResource("Gradient_dqecl")
+width = 300
+height = 50
+
+[sub_resource type="Gradient" id="Gradient_1k83u"]
+colors = PackedColorArray(0.0980392, 0.45098, 0.803922, 1, 0.0980392, 0.45098, 0.803922, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_88id4"]
+gradient = SubResource("Gradient_1k83u")
+width = 300
+height = 50
+
+[node name="HealthBars" type="Node2D"]
+
+[node name="PlayerHealth" type="TextureProgressBar" parent="."]
+offset_left = 820.0
+offset_top = 550.0
+offset_right = 1120.0
+offset_bottom = 614.0
+fill_mode = 1
+texture_under = SubResource("GradientTexture2D_35yk0")
+texture_progress = SubResource("GradientTexture2D_rj34r")
+script = ExtResource("1_k4dk8")
+
+[node name="EnemyHealth" type="TextureProgressBar" parent="."]
+offset_left = 30.0
+offset_top = 550.0
+offset_right = 330.0
+offset_bottom = 600.0
+texture_under = SubResource("GradientTexture2D_xvqi3")
+texture_progress = SubResource("GradientTexture2D_88id4")
+script = ExtResource("2_2h0kf")

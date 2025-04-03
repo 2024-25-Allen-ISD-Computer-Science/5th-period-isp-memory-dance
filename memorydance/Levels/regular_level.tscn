@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1vq6xj2b0qnt"]
+
+[ext_resource type="Script" path="res://Levels/regular_level.gd" id="1_dc151"]
+[ext_resource type="PackedScene" uid="uid://desik7syjbhuv" path="res://Character Models/Player Models/PlayerModels.tscn" id="2_tlipk"]
+[ext_resource type="PackedScene" uid="uid://drow2glx4rqn7" path="res://Character Models/Enemy Models/EnemyModels.tscn" id="3_ghm73"]
+[ext_resource type="PackedScene" uid="uid://8a2p58igvts5" path="res://Scene Setup/text_popups.tscn" id="4_dlecj"]
+[ext_resource type="PackedScene" uid="uid://cog8flxuduvjl" path="res://Scene Setup/Health System/health_bars.tscn" id="5_lpoix"]
+[ext_resource type="PackedScene" uid="uid://matarjgif5s2" path="res://Scene Setup/Move Markers/move_markers.tscn" id="6_cqvep"]
+
+[node name="LevelSetup" type="Node2D"]
+script = ExtResource("1_dc151")
+
+[node name="PlayerModels" parent="." instance=ExtResource("2_tlipk")]
+position = Vector2(760, 300)
+
+[node name="EnemyModels" parent="." instance=ExtResource("3_ghm73")]
+position = Vector2(380, 340)
+
+[node name="StartingTimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="TextPopups" parent="." instance=ExtResource("4_dlecj")]
+position = Vector2(570, 330)
+
+[node name="HealthBars" parent="." instance=ExtResource("5_lpoix")]
+
+[node name="MoveMarkers" parent="." instance=ExtResource("6_cqvep")]
+position = Vector2(190, 0)
+
+[connection signal="timeout" from="StartingTimer" to="." method="_on_starting_timer_timeout"]

@@ -7,6 +7,8 @@ var starting = false
 var restarting = false
 var sound_guides = true
 var sound_playing = false
+# menus = 0, easy = 1, normal = 2, hard = 3
+var current_level = 0
 
 # Player Variables:
 var player_turn = false

@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://matarjgif5s2"]
+
+[ext_resource type="Script" path="res://Scene Setup/Move Markers/move_markers.gd" id="1_nm087"]
+[ext_resource type="Texture2D" uid="uid://bv06mhpwphd26" path="res://Assets/MoveMarker.png" id="2_wck4u"]
+
+[node name="MoveMarkers" type="Node2D"]
+script = ExtResource("1_nm087")
+
+[node name="MoveMarker" type="Sprite2D" parent="."]
+position = Vector2(308, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_wck4u")
+
+[node name="MoveMarker2" type="Sprite2D" parent="."]
+position = Vector2(358, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_wck4u")
+
+[node name="MoveMarker3" type="Sprite2D" parent="."]
+position = Vector2(408, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_wck4u")
+
+[node name="MoveMarker4" type="Sprite2D" parent="."]
+position = Vector2(458, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_wck4u")
+
+[node name="MoveMarker5" type="Sprite2D" parent="."]
+position = Vector2(508, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_wck4u")
+
+[node name="MoveMarker6" type="Sprite2D" parent="."]
+position = Vector2(558, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_wck4u")
+
+[node name="MoveMarker7" type="Sprite2D" parent="."]
+position = Vector2(608, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_wck4u")
+
+[node name="MoveMarker8" type="Sprite2D" parent="."]
+position = Vector2(658, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_wck4u")
+
+[node name="MoveMarker9" type="Sprite2D" parent="."]
+position = Vector2(708, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_wck4u")
+
+[node name="MoveMarker10" type="Sprite2D" parent="."]
+position = Vector2(758, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_wck4u")
+
+[node name="MoveMarker11" type="Sprite2D" parent="."]
+position = Vector2(808, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_wck4u")
+
+[node name="MoveMarker12" type="Sprite2D" parent="."]
+position = Vector2(858, 520)
+scale = Vector2(0.0842593, 0.0842593)
+texture = ExtResource("2_wck4u")

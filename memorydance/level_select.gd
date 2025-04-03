@@ -1,16 +1,22 @@
 extends Node2D
 
+func ready():
+	Global.current_level = 0
+
 func _on_main_menu_button_up():
 	get_tree().change_scene_to_file("res://main_menu.tscn")
 
 func _on_easy_button_up():
-	get_tree().change_scene_to_file("res://level_test.tscn")
+	Global.current_level = 1
+	get_tree().change_scene_to_file("res://Levels/regular_level.tscn")
 
 func _on_normal_button_up():
-	get_tree().change_scene_to_file("res://normal_level.tscn")
+	Global.current_level = 2
+	get_tree().change_scene_to_file("res://Levels/regular_level.tscn")
 
 func _on_hard_button_up():
-	get_tree().change_scene_to_file("res://hard_level.tscn")
+	Global.current_level = 3
+	get_tree().change_scene_to_file("res://Levels/regular_level.tscn")
 
 func _on_infinity_mode_button_up():
 	get_tree().change_scene_to_file("res://infinity_mode.tscn")

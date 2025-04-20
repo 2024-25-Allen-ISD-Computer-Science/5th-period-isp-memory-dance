@@ -1,0 +1,53 @@
+[gd_scene load_steps=10 format=3 uid="uid://c0hijy24ubl10"]
+
+[ext_resource type="Script" path="res://Levels/add_one.gd" id="1_dcrkc"]
+[ext_resource type="PackedScene" uid="uid://tc10yblvai1q" path="res://Scene Setup/Background.tscn" id="2_jo16o"]
+[ext_resource type="PackedScene" uid="uid://desik7syjbhuv" path="res://Character Models/Player Models/PlayerModels.tscn" id="3_u8ca1"]
+[ext_resource type="PackedScene" uid="uid://drow2glx4rqn7" path="res://Character Models/Enemy Models/EnemyModels.tscn" id="4_1nf2a"]
+[ext_resource type="PackedScene" uid="uid://8a2p58igvts5" path="res://Scene Setup/text_popups.tscn" id="5_7js54"]
+[ext_resource type="PackedScene" uid="uid://cog8flxuduvjl" path="res://Scene Setup/Health System/health_bars.tscn" id="6_m60fl"]
+[ext_resource type="FontFile" uid="uid://c2ebj8c8sm00n" path="res://Assets/Nunito-Bold.ttf" id="7_7u0or"]
+[ext_resource type="Script" path="res://Levels/move_marker.gd" id="8_pydy8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_10h5n"]
+font = ExtResource("7_7u0or")
+font_size = 70
+outline_size = 5
+outline_color = Color(0.360784, 0.980392, 0.956863, 1)
+
+[node name="OneAndDone" type="Node2D"]
+script = ExtResource("1_dcrkc")
+
+[node name="Background" parent="." instance=ExtResource("2_jo16o")]
+
+[node name="PlayerModels" parent="." instance=ExtResource("3_u8ca1")]
+position = Vector2(760, 334)
+
+[node name="EnemyModels" parent="." instance=ExtResource("4_1nf2a")]
+position = Vector2(380, 369)
+
+[node name="StartingTimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="TextPopups" parent="." instance=ExtResource("5_7js54")]
+position = Vector2(570, 330)
+
+[node name="HealthBars" parent="." instance=ExtResource("6_m60fl")]
+position = Vector2(0, 30)
+
+[node name="MoveMarker" type="Label" parent="."]
+offset_left = 546.0
+offset_top = 517.0
+offset_right = 630.0
+offset_bottom = 613.0
+text = "0"
+label_settings = SubResource("LabelSettings_10h5n")
+script = ExtResource("8_pydy8")
+
+[connection signal="timeout" from="StartingTimer" to="." method="_on_starting_timer_timeout"]

@@ -16,4 +16,4 @@ func _on_main_menu_button_down():
 # When main menu button is released, change to main menu scene
 func _on_main_menu_button_up():
 	Global.restarting = false
-	get_tree().change_scene_to_file("res://main_menu.tscn")
+	get_tree().change_scene_to_file("res://Navigation/main_menu.tscn")

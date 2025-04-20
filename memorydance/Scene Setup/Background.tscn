@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://tc10yblvai1q"]
+[gd_scene load_steps=4 format=3 uid="uid://tc10yblvai1q"]
+
+[ext_resource type="Script" path="res://Scene Setup/background.gd" id="1_vcer6"]
+[ext_resource type="Texture2D" uid="uid://cxr8jljomp7wk" path="res://Assets/Background.png" id="1_yc1do"]
+[ext_resource type="Texture2D" uid="uid://bokmer24nnye7" path="res://Assets/LevelSelectButton.png" id="2_p1slt"]
 
 [node name="Background" type="Node2D"]
+script = ExtResource("1_vcer6")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(575.5, 391.842)
+scale = Vector2(0.992242, 0.992241)
+texture = ExtResource("1_yc1do")
+
+[node name="LevelSelectButton2" type="Sprite2D" parent="."]
+position = Vector2(953, 53)
+texture = ExtResource("2_p1slt")
+metadata/_edit_lock_ = true
+
+[node name="LevelSelectButton" type="Button" parent="."]
+offset_left = 762.0
+offset_top = 8.0
+offset_right = 1144.0
+offset_bottom = 98.0
+flat = true
+
+[connection signal="button_down" from="LevelSelectButton" to="." method="_on_level_select_button_button_down"]
+[connection signal="button_up" from="LevelSelectButton" to="." method="_on_level_select_button_button_up"]

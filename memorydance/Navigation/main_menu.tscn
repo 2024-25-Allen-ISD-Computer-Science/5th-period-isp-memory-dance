@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddn2okx80ha4p"]
+
+[ext_resource type="Script" path="res://Navigation/main_menu.gd" id="1_6mkty"]
+[ext_resource type="Texture2D" uid="uid://lguqmkj4ap6h" path="res://Assets/Start Screen/Memory Dance Game.png" id="2_tbdof"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_6mkty")
+
+[node name="MemoryDanceGame" type="Sprite2D" parent="."]
+position = Vector2(431, 432)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_tbdof")
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 285.0
+offset_top = 724.0
+offset_right = 599.0
+offset_bottom = 838.0
+flat = true
+metadata/_edit_lock_ = true
+
+[connection signal="button_up" from="StartButton" to="." method="_on_start_button_button_up"]

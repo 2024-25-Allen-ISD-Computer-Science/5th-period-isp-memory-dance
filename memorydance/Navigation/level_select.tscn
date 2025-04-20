@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://boirynxnd1vb2"]
 
-[ext_resource type="Texture2D" uid="uid://ba85ocl8hm3s5" path="res://Assets/LevelSelect.png" id="1_qy2bd"]
-[ext_resource type="Script" path="res://level_select.gd" id="1_ty7ym"]
+[ext_resource type="Script" path="res://Navigation/level_select.gd" id="1_rdd4w"]
+[ext_resource type="Texture2D" uid="uid://ba85ocl8hm3s5" path="res://Assets/LevelSelect.png" id="2_a1x1p"]
 
 [node name="LevelSelect" type="Node2D"]
-script = ExtResource("1_ty7ym")
+script = ExtResource("1_rdd4w")
 
 [node name="LevelSelect" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("1_qy2bd")
+texture = ExtResource("2_a1x1p")
 metadata/_edit_lock_ = true
 
 [node name="MainMenu" type="Button" parent="."]

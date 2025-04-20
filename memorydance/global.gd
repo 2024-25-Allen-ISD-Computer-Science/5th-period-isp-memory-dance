@@ -5,9 +5,9 @@ var current_move = 0
 var text = 0
 var starting = false
 var restarting = false
-var sound_guides = true
+var sound_guides = false
 var sound_playing = false
-# menus = 0, easy = 1, normal = 2, hard = 3
+# menus = 0, easy = 1, normal = 2, hard = 3, one and done = 4
 var current_level = 0
 
 # Player Variables:

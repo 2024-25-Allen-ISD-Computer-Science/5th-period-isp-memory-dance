@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwmfy8eomyaa6"]
+
+[ext_resource type="PackedScene" uid="uid://tc10yblvai1q" path="res://Scene Setup/Background.tscn" id="1_bfwlw"]
+[ext_resource type="Script" path="res://Levels/infinite_mode.gd" id="1_x5lua"]
+[ext_resource type="PackedScene" uid="uid://desik7syjbhuv" path="res://Character Models/Player Models/PlayerModels.tscn" id="2_cs4w1"]
+[ext_resource type="PackedScene" uid="uid://drow2glx4rqn7" path="res://Character Models/Enemy Models/EnemyModels.tscn" id="3_6rxha"]
+[ext_resource type="PackedScene" uid="uid://8a2p58igvts5" path="res://Scene Setup/text_popups.tscn" id="5_hcuds"]
+[ext_resource type="PackedScene" uid="uid://matarjgif5s2" path="res://Scene Setup/Move Markers/move_markers.tscn" id="6_erq5g"]
+
+[node name="InfiniteMode" type="Node2D"]
+script = ExtResource("1_x5lua")
+
+[node name="Background" parent="." instance=ExtResource("1_bfwlw")]
+
+[node name="PlayerModels" parent="." instance=ExtResource("2_cs4w1")]
+position = Vector2(760, 334)
+
+[node name="EnemyModels" parent="." instance=ExtResource("3_6rxha")]
+position = Vector2(380, 369)
+
+[node name="StartingTimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="TextPopups" parent="." instance=ExtResource("5_hcuds")]
+position = Vector2(570, 330)
+
+[node name="MoveMarkers" parent="." instance=ExtResource("6_erq5g")]
+position = Vector2(190, 30)
+
+[connection signal="timeout" from="StartingTimer" to="." method="_on_starting_timer_timeout"]
